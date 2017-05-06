@@ -67,6 +67,6 @@ public class Recurrence3_16a implements Sequence {
         StdOut.printf("%5s %8s %14s\n", "N", "eval", "simplified");
         StdOut.println("----------------------------");
         for (int N = 0; N <= maxN; N++)
-            StdOut.printf("%5d %10.2f %11.2f\n", N, r.eval(N), r.simplified(N));*/
+            StdOut.printf("%5d %10.2e %11.2e\n", N, r.eval(N), r.simplified(N));*/
     }
 }
