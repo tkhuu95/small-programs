@@ -1,7 +1,7 @@
 /*
  * Name:         Thomas Khuu
  * Date:         4-7-17
- * Last updated: 4-27-17
+ * Last updated: 5-6-17
  *
  * An Introduction to the Analysis of Algorithms by Sedgewick and Flajolet
  * Problem 2.12
@@ -29,6 +29,7 @@
  *   1.0715086071862673E301
  */
 package edu.princeton.cs.algs4;
+
 import edu.princeton.cs.algs4.StdOut;
 import java.lang.Math;
 
@@ -63,8 +64,10 @@ public class Recurrence2_12 implements Sequence {
         StdOut.println("Solution from simplified version");
         StdOut.println(r.simplified(maxN));
         
-        /*StdOut.println("----------------------------");
-        for (int N = 0; N <= maxN; N += 2)
-            StdOut.printf("%9d %9.2f %9.2f\n", N, r.eval(N), r.simplified(N));*/
+        /*StdOut.println();
+        StdOut.printf("%5s %10s %13s\n", "N", "eval", "simplified");
+        StdOut.println("----------------------------");
+        for (int N = 0; N <= maxN; N++)
+            StdOut.printf("%5d %11.2e %11.2e\n", N, r.eval(N), r.simplified(N));*/
     }
 }
