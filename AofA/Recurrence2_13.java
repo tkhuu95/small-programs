@@ -1,7 +1,7 @@
 /*
  * Name:         Thomas Khuu
  * Date:         4-7-17
- * Last updated: 4-27-17
+ * Last updated: 5-6-17
  *
  * An Introduction to the Analysis of Algorithms by Sedgewick and Flajolet
  * Problem 2.13
@@ -61,5 +61,11 @@ public class Recurrence2_13 implements Sequence {
         StdOut.println("----------------------------");
         StdOut.println("Solution from simplified version");
         StdOut.println(r.simplified(maxN));
+        
+        /*StdOut.println();
+        StdOut.printf("%5s %9s %12s\n", "N", "eval", "simplified");
+        StdOut.println("----------------------------");
+        for (int N = 0; N <= maxN; N++)
+            StdOut.printf("%5d %9.2f %9.2f\n", N, r.eval(N), r.simplified(N));*/
     }
 }
