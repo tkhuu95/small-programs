@@ -1,7 +1,7 @@
 /*
  * Name:         Thomas Khuu
  * Date:         4-7-17
- * Last updated: 4-27-17
+ * Last updated: 5-29-17
  *
  * An Introduction to the Analysis of Algorithms by Sedgewick and Flajolet
  * Problem 1.14
@@ -27,7 +27,7 @@
  *    Solution from simplified version
  *    1249.0
  */
-package edu.princeton.cs.algs4;
+package AofA;
 
 import edu.princeton.cs.algs4.StdOut;
 
@@ -51,16 +51,14 @@ public class Recurrence1_14 implements Sequence {
     public double simplified(int N) {
         
         // Intermediate step version
-        StdOut.println("-----------------------");
+        /*StdOut.println("-----------------------");
         StdOut.println("Intermediate step version");
         double[] B = new double[N + 1];
         for (int i = 1; i <= N; i++)
             B[i] = (1.0 / i) + ((i + 1.0) / i) * B[i - 1];
-        StdOut.println(B[N]);
+        StdOut.println(B[N]);*/
         
-        StdOut.println("-----------------------");
-        StdOut.println("Solution from simplified version");
-        return (double) (N);
+        return 1.0 * N;
     }
     
     public double eval(int N) {
@@ -74,6 +72,8 @@ public class Recurrence1_14 implements Sequence {
         StdOut.println("Original recurrence relation");
         StdOut.println(r.eval(maxN));
         
+        StdOut.println("-----------------------");
+        StdOut.println("Solution from simplified version");
         StdOut.println(r.simplified(maxN));
         
         /*StdOut.println("----------------------------");
