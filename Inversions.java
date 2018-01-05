@@ -1,12 +1,14 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+
 import java.lang.Math;
+
 import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Implementation of both the brute force way and the optimal way
- * of counting inversions.
+ * Implementation of both the brute force way, insertion sort way, and 
+ * the optimal way of counting inversions.
  * 
  * @author Thomas Khuu
  */
@@ -30,22 +32,50 @@ public class Inversions {
     }
 
     /*
+     * The number of inversions is equal to the number of exchanges in
+     * insertion sort.
+     */
+    public static long insertionSort(int[] a) {
+        int[] copied = new int[a.length];
+        System.arraycopy(a, 0, copied, 0, a.length);
+
+        long count = 0;
+        for (int i = 0; i < copied.length - 1; i++) {
+            int j = i;
+            while (j >= 0 && swapped(copied, j--))
+                count++;
+        }
+
+        return count;
+    }
+    
+    // Can a swap happen with a[j] and a[j + 1]?
+    private static boolean swapped(int[] a, int j) {
+        if (a[j] < a[j + 1]) return false;
+        int temp = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = temp;
+        return true;
+    }
+    
+    /*
      * Optimal O(NlogN) inversion count.
      */
     public static long mergeSort(int[] arr) {
         inversionCount = 0;
         comparisonCount = 0;
-        int[] a = mergeSort(arr, 0, arr.length);
-        assert isSorted(a);
+        
+        int[] copied = new int[arr.length];
+        System.arraycopy(arr, 0, copied, 0, arr.length);
+        int[] a = mergeSort(copied, 0, copied.length);
+        //assert isSorted(a);
 
         return inversionCount;
     }
 
     private static int[] mergeSort(int[] arr, int lo, int hi) {
         if (hi - lo <= 1) {
-            int[] temp = new int[1];
-            temp[0] = arr[lo];
-            return temp; 
+            return new int[] { arr[lo] }; 
         }
         int mid = (hi + lo) / 2;
         int[] b = mergeSort(arr, lo, mid);
@@ -124,7 +154,8 @@ public class Inversions {
         int i = 0;
         while (in.hasNextInt())
             arr[i++] = in.nextInt();
-        System.out.println(mergeSort(arr) + "  " + bruteForce(arr));
+        System.out.println(mergeSort(arr) + "  " + bruteForce(arr) + " " +
+                                                   insertionSort(arr));
 
         for (int i = 0; i < 1000; i++) {
             int[] a = generate();
@@ -133,7 +164,8 @@ public class Inversions {
         
         for (int i = 0; i < 1000; i++) {
             int[] a = generate();
-            System.out.format("%10d\t%10d\n", bruteForce(a), mergeSort(a));
+            System.out.format("%10d\t%10d\t%10d\n", 
+                              bruteForce(a), insertionSort(a), mergeSort(a));
         }
     }
 }
