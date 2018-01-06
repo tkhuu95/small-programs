@@ -1,7 +1,7 @@
 /*
  * Name:         Thomas Khuu
  * Date:         4-16-17
- * Last updated: 5-6-17
+ * Last updated: 1-6-18
  *
  * An Introduction to the Analysis of Algorithms by Sedgewick and Flajolet
  * Problem 3.16a
@@ -28,7 +28,7 @@
  *    Solution from simplified version
  *    2.863866442867825E152
  */
-package edu.princeton.cs.algs4;
+package AofA;
 
 import edu.princeton.cs.algs4.StdOut;
 
@@ -45,7 +45,7 @@ public class Recurrence3_16a implements Sequence {
     }
     
     public double simplified(int N) {
-        return (1.0/5)*(-Math.pow(-3.0, N) + Math.pow(2.0, N));
+        return (1.0/5) * (-Math.pow(-3.0, N) + Math.pow(2.0, N));
     }
     
     public double eval(int N) {
