@@ -7,9 +7,10 @@
  * using StdDraw.java from Princeton. 
  */
  
- package edu.princeton.cs.algs4;
+package AofA;
   
 import edu.princeton.cs.algs4.StdDraw;
+
 import java.awt.Color;
 
 public class RecurrenceGraph {
