@@ -1,7 +1,7 @@
 /*
  * Name:         Thomas Khuu
  * Date:         4-28-17
- * Last updated: 5-01-17
+ * Last updated: 1-6-18
  *
  * An Introduction to the Analysis of Algorithms by Sedgewick and Flajolet
  * Problem 2.31/Problem 3.16d
@@ -25,9 +25,10 @@
  *    -0.9999999999999628
  */
  
-package edu.princeton.cs.algs4;
+package AofA;
 
 import edu.princeton.cs.algs4.StdOut;
+
 import org.apache.commons.math3.complex.Complex;
 
 public class Recurrence2_31 implements Sequence {
