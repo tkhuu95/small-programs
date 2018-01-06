@@ -1,7 +1,7 @@
 /*
  * Name:         Thomas Khuu
  * Date:         4-14-17
- * Last updated: 4-27-17
+ * Last updated: 1-6-18
  * 
  * An Introduction to the Analysis of Algorithms by Sedgewick and Flajolet
  * Problem 2.15
@@ -28,7 +28,7 @@
  *    Solution from simplified version
  *    67368.47511731093
  */
-package edu.princeton.cs.algs4;
+package AofA;
 
 import edu.princeton.cs.algs4.StdOut;
 
@@ -50,10 +50,10 @@ public class Recurrence2_15 implements Sequence {
     
     // Sum of the harmonic series
     private double harmonic(int n) {
-        double summation = 0;
+        double sum = 0;
         for (int i = 1; i <= n; i++)
-            summation += 1.0/i;
-        return summation;
+            sum += 1.0/i;
+        return sum;
     }
     
     public double eval(int N) {
