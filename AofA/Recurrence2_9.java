@@ -1,7 +1,7 @@
 /*
  * Name:         Thomas Khuu
  * Date:         5-05-17
- * Last updated: 5-05-17
+ * Last updated: 1-6-18
  *
  * An Introduction to the Analysis of Algorithms by Sedgewick and Flajolet
  * Problem 2.9
@@ -22,7 +22,7 @@
  *    2.34000234000234E-6
  */
 
-package edu.princeton.cs.algs4;
+package AofA;
 
 import edu.princeton.cs.algs4.StdOut;
 
@@ -39,7 +39,7 @@ public class Recurrence2_9 implements Sequence {
     }
     
     public double simplified(int N) {
-        return 2.0/((N + 2)*(N + 1));
+        return 2.0 / ((N + 2)*(N + 1));
     }
     
     public double eval(int N) {
