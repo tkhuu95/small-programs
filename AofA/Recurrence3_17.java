@@ -1,7 +1,7 @@
 /*
  * Name:         Thomas Khuu
  * Date:         5-03-17
- * Last updated: 5-05-17
+ * Last updated: 1-6-18
  *
  * An Introduction to the Analysis of Algorithms by Sedgewick and Flajolet
  * Problem 3.17
@@ -22,7 +22,7 @@
  *    1.2842128665889584E207
  */
  
-package edu.princeton.cs.algs4;
+package AofA;
 
 import edu.princeton.cs.algs4.StdOut;
 
